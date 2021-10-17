@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="myName"
+            type="com.campstore.aboutme.MyName" />
+    </data>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{myName.name}"
+        android:textAlignment="center"
+        style="@style/NameStyle" />
+
+    <EditText
+        android:id="@+id/nickname_edit"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/what_is_you_nickname"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/nickname_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@{myName.nickname}"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/star_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:contentDescription="@string/yellow_star"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:text="@string/text_bio"
+            tools:text="@tools:sample/lorem/random"
+            android:lineSpacingMultiplier="1.2"
+            />
+    </ScrollView>
+</LinearLayout>
+</layout>

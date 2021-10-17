@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Abdulsamad Suleiman</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="text_bio">Software Engineer with 5+ years of experience in the Software
+        Development Industry. \n I\'m experienced with various Software Development Methodologies
+        .</string>
+    <string name="what_is_you_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
+</resources>
